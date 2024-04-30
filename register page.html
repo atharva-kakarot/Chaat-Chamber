@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title>
+        Chaat Chamber
+    </title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+<style>
+    body {
+        background-color: white;
+    }
+
+    h1 {
+        font-family: 'Pacifico';
+        color: rgb(88, 88, 88);
+        margin: 40px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .sign-in-form {
+        border-radius: 20px;
+        background-color: #001d3d;
+        width: fit-content;
+        height: fit-content;
+        padding: 30px;
+        contain: content;
+        margin-bottom: 30px;
+    }
+
+    .label {
+        font-size: 25px;
+        margin: 8px;
+        font-family: 'Saira Condensed';
+        color: white;
+    }
+
+    .input-box {
+        font-size: 25px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 10px;
+        margin: 10px;
+        font-family: 'Saira Condensed';
+    }
+
+    .form-button {
+        padding: 10px 20px;
+        font-size: 20px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 20px;
+        background-color: white;
+        font-family: 'Saira Condensed';
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .tab {
+        display: inline-block;
+        padding: 10px 10px;
+        margin: 20px 10px;
+        font-size: 20px;
+        background-color: #001d3d;
+        border-radius: 5px;
+        font-family: 'Saira Condensed';
+        cursor: pointer;
+        color: white;
+    }
+
+    a {
+        color: black;
+    }
+
+    #login {
+        background-color: white;
+        font-weight: 500;
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>Welcome to Chaat Chamber!</h1>
+    <center>
+        <div class="tab" id="register">Register</div>
+        <a href="login page.html"><div class="tab" id="login">Login</div></a>
+        <div class="sign-in-form">
+            <table>
+                <tr>
+                    <td><label class="label">First Name:</label><br><input type="text" class="input-box"
+                            id="first-name"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">Last Name:</label><br><input type="text" class="input-box" id="last-name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="label">E-mail:</label><br><input type="email" class="input-box" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">Password:</label><br><input type="password" class="input-box"
+                            id="password"></td>
+                </tr>
+            </table>
+            <button type="button" class="form-button" id="submit">Create a User</button>
+        </div>
+    </center>
+</body>
+<script type="module" defer>
+
+//-------------------------------------------------Initializing Firebase-------------------------------------------------------------------
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBa3GnWubeEmQe19iWUTtJzruRlKEq5Apo",
+        authDomain: "baba-ka-dhaba-b36e1.firebaseapp.com",
+        projectId: "baba-ka-dhaba-b36e1",
+        storageBucket: "baba-ka-dhaba-b36e1.appspot.com",
+        messagingSenderId: "724921145696",
+        appId: "1:724921145696:web:3dd4c236625c74f575e605"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+
+//----------------------------------Adding an event listener to the submit button-------------------------------------------------------
+
+    submit.addEventListener("click", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const firstName = document.getElementById("first-name").value;
+        const lastName = document.getElementById("last-name").value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log("Account created");
+                window.location.href = "index.html";
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+
+        set(ref(db, 'users/' + firstName), {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            })
+            .then(() => {
+            console.log("saved successfully!");
+            })
+            .catch((error) => {
+            console.log("Write up failed");
+            });
+        })
+
+//--------------------------------------------Adding an event listener to the Enter key on the keyboard-----------------------------------
+
+    document.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            submit.click();
+        }
+    });
+</script>
+</html>
