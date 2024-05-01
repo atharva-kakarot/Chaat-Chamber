@@ -161,8 +161,8 @@ table {
 
 @media only screen and (max-width: 980px) {
     #home {
-        font-size: 55px;
-        margin: 10px 10px;
+        font-size: 50px;
+        margin: 20px 10px;
     }
 
     #logout {
