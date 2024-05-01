@@ -231,7 +231,14 @@
         let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
 
         let welcomeText = document.querySelector("h1");
-        welcomeText.innerText = "Welcome " + userCred + "! Check out our delicacies!";
+        if (!userCred)
+        {
+            welcomeText.innerText = "Welcome! Check out our delicacies!";
+        }
+        else
+        {
+            welcomeText.innerText = "Welcome " + userCred + "! Check out our delicacies!";
+        }
 
         let logoutBtn = () =>
         {
