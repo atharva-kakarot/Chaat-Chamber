@@ -1,310 +1,48 @@
 <html>
-    <head>
-        <title>
-            Chaat Chamber
-        </title>
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: white;
-        }
-    
-        .navbar {
-            contain: content;
-            background-color: #001d3d;
-            padding: 10px;
-            margin: 0px -8px;
-            margin-top: -8px;
-        }
-    
-        #about {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin: 10px;
-            padding: 10px;
-        }
-    
-        #home {
-            cursor: pointer;
-            font-size: 35px;
-            float: left;
-            border: none;
-            background-color: #001d3d;
-            font-family: 'Pacifico';
-            color: white;
-            margin: 5px 5px;
-        }
-        #logout {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin-right: 15px;
-            margin: 10px;
-            padding: 10px 15px;
-        }
-        h1 {
-            font-family: 'Pacifico';
-            color: rgb(91, 91, 91);
-            font-size: 40px;
-            text-align: center;
-            font-weight: 400;
-        }
-        h2{
-            font-family: 'Pacifico';
-            text-shadow: 3px 3px rgb(152, 152, 152);
-            color: rgb(91, 91, 91);
-            font-size: 40px;
-            text-align: center;
-            font-size: 30px;
-            margin-top: -10px;
-            margin-bottom: 30px;
-        }
-        .label
-        {
-            font-size: 20px;
-            font-family: 'Saira Condensed';
-        }
-        input
-        {
-            padding: 10px 0px;
-            border-radius: 5px;
-            border: none;
-            width: 300px;
-            margin: 10px 0px;
-            font-size: 20px;
-            font-family: 'Saira Condensed';
-        }
 
-        .order-summary{
-            width: fit-content;
-            height: fit-content;
-            background-color: rgb(212, 212, 212);
-            border-radius: 10px;
-            padding: 40px;
-            margin: 30px;
-        }
-        .order-list{
-            margin: 40px 0px;
-        }
-        h3
-        {
-            display: inline;
-            margin: 10px 76px;
-            font-family: 'Saira Condensed';
-            font-weight: 400;
-            font-size: 20px;
+<head>
+    <title>
+        Chaat Chamber
+    </title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Chaat Chamber/css/bill.css">
 
-        }
-        #header-name{
-            margin-left: 125px;
-        }
-        td{
-            padding: 5px 20px;
-            font-family: 'Saira Condensed';
-            font-size: 20px;
-        }
-        .total{
-            font-family: 'Saira Condensed';
-            font-weight: 400;
-            font-size: 20px;
-            text-align: center;
-            margin: 30px;
-        }
-        .item-name{
-            display: flex;
-        }
-        .item-price{
-            display: flex;
-            margin-left: 330px;
-            margin-top: -40px;
-        }
-        .item-cart{
-            display: flex;
-            margin-left: 540px;
-            margin-top: -43px;
-        }
-        .close-btn{
-            display: flex;
-            margin-left: 600px;
-            margin-top: -40px;
-            cursor: pointer;
-        }
-        table{
-            display: inline-block;
-        }
-        #confirmBtn{
-            padding: 10px 20px;
-            margin-bottom: 20px;
-            font-family: 'Saira Condensed';
-            font-size: 20px;
-            border-radius: 10px;
-            background-color: rgb(212, 212, 212);
-            border: none;
-            cursor: pointer;
-        }
-
-        @media only screen and (max-width: 980px) {
-            #home{
-                font-size: 55px;
-                margin: 10px 10px;
-            }
-            #logout{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            #about{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            h1{
-                font-size: 55px;
-            }
-            h3{
-                font-size: 30px;
-            }
-            .total{
-                font-size: 30px;
-            }
-            td{
-                font-size: 30px;
-            }
-            .item-price{
-                margin-left: 360px;
-                margin-top: -60px;
-            }
-            .item-cart{
-                margin-left: 580px;
-                margin-top: -63px;
-            }
-            #confirmBtn{
-                font-size: 30px;
-            }
-        }
-    </style>
-    <body>
-        <center>
-            <div class="navbar">
-                <a href="index.html"><button id="home"><span style="color: red">Chaat</span> <span style="color: orange">Chamber</span></button></a>
-                <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
-                <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
-            </div>
-        </center>
-        <h1>Order Summary</h1>
-        <center>
-            <div class="order-summary">
-                    <h3 id="header-name">Name</h3>
-                    <h3 id="header-price">Price</h3>
-                    <h3 id="header-quantity">Quantity</h3>
-                <div class="order-list">
-                </div>
-                <h4 class="total"></h4>
-                <div class="delivery-details"></div>       
+<body>
+    <center>
+        <div class="navbar">
+            <a href="index.html"><button id="home"><span style="color: red">Chaat</span> <span
+                        style="color: orange">Chamber</span></button></a>
+            <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
+            <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
         </div>
-        </center>
-        <center>
-            <button id="confirmBtn">Confirm</button>
-        </center>
-    </body>
-    <script>
-        let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
-        let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
+    </center>
+    <h1>Order Summary</h1>
+    <center>
+        <div class="order-summary">
+            <h3 id="header-name">Name</h3>
+            <h3 id="header-price">Price</h3>
+            <h3 id="header-quantity">Quantity</h3>
+            <div class="order-list">
+            </div>
+            <h4 class="total"></h4>
+            <div class="delivery-details"></div>
+        </div>
+    </center>
+    <center>
+        <button id="confirmBtn">Confirm</button>
+    </center>
+</body>
+<script src="/Chaat Chamber/js/bill.js"></script>
 
-        let logoutBtn = () =>
-        {
-            sessionStorage.removeItem("user-object");
-            sessionStorage.removeItem("user-cred");
-            window.location.href = 'login page.html';
-            alert('User signed out!');
-        }
-
-       let checkInfo = () => 
-       {
-            if(!sessionStorage.getItem("user-cred"))
-            {
-                window.location.href = 'login page.html';
-            }
-        }       
-    window.addEventListener("load", checkInfo);
-    logout.addEventListener("click", logoutBtn);
-
-//--------------------------------------------Displaying items in the cart------------------------------------------------------------------
-
-    function displayCart()
-    {
-        let cartItems = localStorage.getItem("productsInCart");
-        cartItems = JSON.parse(cartItems);
-
-        let itemContainer = document.querySelector(".order-list");
-
-        console.log(cartItems);
-        if (cartItems && itemContainer)
-        {
-            itemContainer.innerHTML = '';
-            Object.values(cartItems).map(function(item)
-            {
-                itemContainer.innerHTML += `
-                    <h3 class="item-name">${item.name}</h3>
-                    <h3 class="item-price">${item.price}</h3>
-                    <h3 class="item-cart">${item.inCart}</h3>`;
-            })
-        }
-        else
-        {
-            itemContainer.innerHTML = "Your cart is empty."
-            itemContainer.style.fontFamily = "Saira Condensed";
-            itemContainer.style.fontSize = "20px";
-        }
-        let total = localStorage.getItem("total-cost");
-        document.querySelector(".total").innerHTML = 'Total:' + ' ' + total + ' Rs';
-    }
-    displayCart();
-
-//----------------------------------------Displaying delivery details in the bill-------------------------------------------------
-
-    let fullName = JSON.parse(localStorage.getItem("fullName"));
-    let mobileNum = JSON.parse(localStorage.getItem("mobileNum"));
-    let address = JSON.parse(localStorage.getItem("address"));
-    let city = JSON.parse(localStorage.getItem("city"));
-    let pinCode = JSON.parse(localStorage.getItem("pinCode"));
-
-    console.log(fullName);
-    document.querySelector(".delivery-details").innerHTML = `
-    <table >
-        <tr>
-            <td>Full Name:</td>
-            <td>${fullName}</td>
-        </tr>
-        <tr>
-            <td>Mobile number:</td>
-            <td>${mobileNum}</td>
-        </tr>
-        <tr>
-            <td>Address:</td>
-            <td>${address}</td>
-        </tr>
-        <tr>
-            <td>City:</td>
-            <td>${city}</td>
-        </tr>
-        <tr>
-            <td>Pin Code:</td>
-            <td>${pinCode}</td>
-        </tr>
-    </table>`;
-    </script>
-    
 </html>

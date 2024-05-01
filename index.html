@@ -1,381 +1,89 @@
 <html>
-    <head>
-        <title>Chaat Chamber</title>
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: white;
-        }
-    
-        .navbar {
-            contain: content;
-            background-color: #001d3d;
-            padding: 10px;
-            margin: 0px -8px;
-            margin-top: -8px;
-        }
-    
-        #about {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin: 10px;
-            padding: 10px;
-        }
-        #home {
-            cursor: pointer;
-            font-size: 35px;
-            float: left;
-            border: none;
-            background-color: #001d3d;
-            font-family: 'Pacifico';
-            color: white;
-            margin: 5px 5px;
-        }
-        #logout {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin-right: 15px;
-            margin: 10px;
-            padding: 10px 15px;
-        }
-        .menu-items {
-            margin-top: 50px;
-            margin-bottom: 100px;
-        }
-    
-        .menu {
-            height: 350px;
-            width: 350px;
-            border: none;
-            border-radius: 20px;
-        }
-    
-        .menu img {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            margin-top: 25px;
-        }
-    
-        .card {
-            height: 475px;
-            width: 400px;
-            border: none;
-            border-radius: 20px;
-            display: flex;
-            display: inline-block;
-            font-size: 20px;
-            transition: 0.5s;
-        }
-    
-        .card:hover {
-            background-color: rgb(235, 235, 235);
-            transition: 0.5s;
-        }
-    
-        .buy-now {
-            padding: 10px 8px;
-            font-size: 20px;
-            border-radius: 5px;
-            background-color: rgb(0, 123, 255);
-            color: white;
-            border: none;
-            float: right;
-            margin: 15px;
-            font-family: 'Saira Condensed';
-            transition: 0.5s;
-        }
-    
-        .buy-now:hover {
-            cursor: pointer;
-            transition: 0.5s;
-        }
-        
-        .menu-text {
-            width: 196px;
-            margin: 15px;
-            float: left;
-            text-align: left;
-            font-family: 'Saira Condensed';
-        }
-    
-        h1 {
-            font-family: 'Pacifico';
-            color: rgb(88, 88, 88);
-            font-size: 40px;
-            font-weight: 500;
-        }
-        #cart
-        {
-            float: right;
-            font-size: 30px;
-            border: none;
-            background-color: #001d3d;
-            margin-right: 15px;
-            padding: 10px;
-            cursor: pointer;
-            margin: 10px;
-            color: white;
-        }
 
-        @media only screen and (max-width: 980px) {
-            #home{
-                font-size: 50px;
-                margin: 20px 10px;
-            }
-            #cart{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            #logout{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            #about{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            h1{
-                font-size: 55px;
-            }
-            .card{
-                width: 450px;
-                height: 550px;
-            }
-            .menu {
-                width: 400px;
-                height: 400px;
-            }
-            .buy-now{
-                font-size: 30px;
-                margin: 28px 0px;
-            }
-            .menu-text{
-                font-size: 30px;
-            }
-            #cardsix{
-                overflow: hidden;
-                text-wrap: nowrap;
-            }
-        }
-    </style>
-    <body>
-        <center>
-            <div class="navbar">
-                <a href="index.html"><button id="home"><span style="color: red">Chaat</span> <span style="color: orange">Chamber</span></button></a>
-                <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
-                <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
-                <a href="order summary.html"><button id="cart"><i class="fas fa-shopping-cart"><span class="cart-span" style="font-size: 20px">0</span></i></button></a>
-            </div>
-        </center>
-        <center>
-            <h1></h1>
-            <div class="menu-items">
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://spicebreeze.com/wp-content/uploads/2022/02/Indian-Samosas-sq.jpg" alt="samosa">
-                        <div class="menu-text">Dungeon Samosa<br>Rs.20</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
-                </div>
+<head>
+    <title>Chaat Chamber</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Chaat Chamber/css/index.css">
 
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://ministryofcurry.com/wp-content/uploads/2022/07/Dahi-Puri_-3.jpg" alt="sev puri">
-                        <div class="menu-text">Sev Puri Sensation<br>Rs.40</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://static.toiimg.com/thumb/61048461.cms?imgsize=1981854&width=800&height=800" alt="pani puri">
-                        <div class="menu-text">Pani Puri Pizzazz<br>Rs.200</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://idlygo.com/storage/media/1679721475-Butter-masala-dosa-square-with-butter-and-masala-reference-4x3.jpg" alt="dosa">
-                        <div class="menu-text">Dosa Delight<br>Rs.50</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-dahi-puri.jpg" alt="dahi puri">
-                        <div class="menu-text">Creamy Curd Vada<br>Rs.30</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="menu">
-                        <img src="https://www.funfoodfrolic.com/wp-content/uploads/2022/03/Kachori-Blog.jpg" alt="khasta kachori">
-                        <div class="menu-text" id="cardsix">Khasta Kachori Kingdom<br>Rs.40</div>
-                        <button class="buy-now">Add to cart</button>
-                    </div>
+<body>
+    <center>
+        <div class="navbar">
+            <a href="index.html"><button id="home"><span style="color: red">Chaat</span> <span
+                        style="color: orange">Chamber</span></button></a>
+            <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
+            <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
+            <a href="order summary.html"><button id="cart"><i class="fas fa-shopping-cart"><span class="cart-span"
+                            style="font-size: 20px">0</span></i></button></a>
+        </div>
+    </center>
+    <center>
+        <h1></h1>
+        <div class="menu-items">
+            <div class="card">
+                <div class="menu">
+                    <img src="https://spicebreeze.com/wp-content/uploads/2022/02/Indian-Samosas-sq.jpg" alt="samosa">
+                    <div class="menu-text">Dungeon Samosa<br>Rs.20</div>
+                    <button class="buy-now">Add to cart</button>
                 </div>
             </div>
-        </center>
-    </body>
-    <script>
 
-//---------------------------------Making an array of object items------------------------------------------------------------------------
+            <div class="card">
+                <div class="menu">
+                    <img src="https://ministryofcurry.com/wp-content/uploads/2022/07/Dahi-Puri_-3.jpg" alt="sev puri">
+                    <div class="menu-text">Sev Puri Sensation<br>Rs.40</div>
+                    <button class="buy-now">Add to cart</button>
+                </div>
+            </div>
 
-        let products = [
-        {
-            name: 'Dungeon Samosa',
-            price: 20,
-            inCart: 0
-        },{
-            name: 'Sev Puri Sensation',
-            price: 40,
-            inCart: 0
-        },{
-            name: 'Pani Puri Pizzazz',
-            price: 200,
-            inCart: 0
-        },{
-            name: 'Dosa Delight',
-            price: 50,
-            inCart: 0
-        },{
-            name: 'Creamy Curd Vada',
-            price: 30,
-            inCart: 0
-        },{
-            name: 'Khasta Kachori Kingdom',
-            price: 40,
-            inCart: 0
-        }
-        ]
+            <div class="card">
+                <div class="menu">
+                    <img src="https://static.toiimg.com/thumb/61048461.cms?imgsize=1981854&width=800&height=800"
+                        alt="pani puri">
+                    <div class="menu-text">Pani Puri Pizzazz<br>Rs.200</div>
+                    <button class="buy-now">Add to cart</button>
+                </div>
+            </div>
 
-//---------------------------------Adding event listeners to the logout button and window--------------------------------------
+            <div class="card">
+                <div class="menu">
+                    <img src="https://idlygo.com/storage/media/1679721475-Butter-masala-dosa-square-with-butter-and-masala-reference-4x3.jpg"
+                        alt="dosa">
+                    <div class="menu-text">Dosa Delight<br>Rs.50</div>
+                    <button class="buy-now">Add to cart</button>
+                </div>
+            </div>
 
-        let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
-        let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
+            <div class="card">
+                <div class="menu">
+                    <img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-dahi-puri.jpg"
+                        alt="dahi puri">
+                    <div class="menu-text">Creamy Curd Vada<br>Rs.30</div>
+                    <button class="buy-now">Add to cart</button>
+                </div>
+            </div>
 
-        let welcomeText = document.querySelector("h1");
-        if (!userCred)
-        {
-            welcomeText.innerText = "Welcome! Check out our delicacies!";
-        }
-        else
-        {
-            welcomeText.innerText = "Welcome " + userCred + "! Check out our delicacies!";
-        }
+            <div class="card">
+                <div class="menu">
+                    <img src="https://www.funfoodfrolic.com/wp-content/uploads/2022/03/Kachori-Blog.jpg"
+                        alt="khasta kachori">
+                    <div class="menu-text" id="cardsix">Khasta Kachori Kingdom<br>Rs.40</div>
+                    <button class="buy-now">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+<script src="/Chaat Chamber/js/index.js"></script>
 
-        let logoutBtn = () =>
-        {
-            sessionStorage.removeItem("user-object");
-            sessionStorage.removeItem("user-cred");
-            window.location.href = 'login page.html';
-            alert('User signed out!');
-        }
-
-       let checkInfo = () => 
-       {
-            if(!sessionStorage.getItem("user-cred"))
-            {
-                window.location.href = 'login page.html';
-            }
-        }       
-    window.addEventListener("load", checkInfo);
-    logout.addEventListener("click", logoutBtn);
-
-//---------------------------------Adding items to the cart-------------------------------------------------------------------------------- 
-
-    let menuItems = document.querySelectorAll(".menu-items");
-    let addToCartBtns = document.querySelectorAll(".buy-now");
-
-    for (let i=0; i<addToCartBtns.length; i++)
-    {
-        addToCartBtns[i].addEventListener("click", function () 
-        {
-            products[i];
-            let itemNumbers = parseInt(localStorage.getItem("cart-items"));
-
-            if (itemNumbers)
-            {
-                localStorage.setItem("cart-items", itemNumbers + 1);
-                document.querySelector(".cart-span").textContent = itemNumbers + 1;
-            }
-            else
-            {
-                localStorage.setItem("cart-items", 1);
-                document.querySelector(".cart-span").textContent = 1;
-            }
-            console.log(products[i]);
-
-            let cartItems = localStorage.getItem("productsInCart");
-            cartItems = JSON.parse(cartItems);
-
-            if(cartItems != null)
-            {
-                if (cartItems[products[i].name] == undefined)
-                {
-                    cartItems = {
-                        ...cartItems,
-                        [products[i].name]: products[i]
-                    }
-                }
-                cartItems[products[i].name].inCart += 1;  
-            }
-            else
-            {
-                products[i].inCart = 1;
-                cartItems = {
-                    [products[i].name]: products[i]
-                }
-            }
-            localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-
-            //Calculating total price of the cart items
-
-            let cartCost = localStorage.getItem("total-cost");
-            
-            if (cartCost != null)
-            {
-                cartCost = parseInt(cartCost);
-                localStorage.setItem("total-cost", cartCost + products[i].price);
-            }
-            else
-            {
-                localStorage.setItem("total-cost", products[i].price);
-            }
-        });
-    };
-     
-//----------------------------------------------Displaying cart values on loading the page-----------------------------------------------------
-
-    function onLoadCartNumbers()
-    {
-        let itemNumbers = parseInt(localStorage.getItem("cart-items"));
-        if (itemNumbers) 
-        {
-            document.querySelector(".cart-span").textContent = itemNumbers;
-        }
-    }
-    onLoadCartNumbers();
-    
-    </script>
 </html>

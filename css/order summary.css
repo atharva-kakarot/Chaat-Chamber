@@ -1,0 +1,248 @@
+body {
+    background-color: white;
+}
+
+.navbar {
+    contain: content;
+    background-color: #001d3d;
+    padding: 10px;
+    margin: 0px -8px;
+    margin-top: -8px;
+}
+
+#about {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+#home {
+    cursor: pointer;
+    font-size: 35px;
+    float: left;
+    border: none;
+    background-color: #001d3d;
+    font-family: 'Pacifico';
+    color: white;
+    margin: 5px 5px;
+}
+
+#logout {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin-right: 15px;
+    margin: 10px;
+    padding: 10px 15px;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    color: rgb(91, 91, 91);
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Pacifico';
+    color: rgb(91, 91, 91);
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: -5px;
+    font-weight: 400;
+}
+
+.details {
+    width: 420px;
+    height: 795px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.label {
+    font-size: 20px;
+    font-family: 'Saira Condensed';
+}
+
+input {
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-family: 'Saira Condensed';
+}
+
+.order-summary {
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.order-list {
+    margin-top: -25px;
+}
+
+.orders {
+    background-color: rgb(212, 212, 212);
+    width: 700px;
+    border-radius: 20px;
+}
+
+h3,
+span {
+    display: inline;
+    margin: 10px 60px;
+    font-family: 'Saira Condensed';
+    font-weight: 400;
+    font-size: 20px;
+}
+
+td {
+    padding: 5px 20px;
+    font-family: 'Saira Condensed';
+    font-size: 20px;
+}
+
+#confirm-button {
+    font-size: 20px;
+    font-family: 'Saira Condensed';
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.total {
+    font-family: 'Saira Condensed';
+    font-weight: 400;
+    font-size: 20px;
+    padding: 30px;
+    margin-top: -10px;
+}
+
+#item-name {
+    display: flex;
+    margin-left: 120px;
+}
+
+#item-price {
+    display: flex;
+    margin-left: 335px;
+    margin-top: -40px;
+}
+
+#item-cart {
+    display: flex;
+    margin-left: 500px;
+    margin-top: -43px;
+}
+
+.close-btn {
+    display: flex;
+    margin-left: 580px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 980px) {
+    #home {
+        font-size: 55px;
+        margin: 10px 10px;
+    }
+
+    #logout {
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    #about {
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .orders {
+        width: 800px;
+    }
+
+    h3,
+    span {
+        font-size: 30px;
+        margin: 10px 50px;
+    }
+
+    #priceheader {
+        margin-left: 115px;
+    }
+
+    #nameheader {
+        margin-left: 90px;
+    }
+
+    #item-name {
+        margin-left: 120px;
+    }
+
+    #item-price {
+        margin-left: 420px;
+        margin-top: -58px;
+    }
+
+    #item-cart {
+        margin-left: 600px;
+        margin-top: -59px;
+    }
+
+    .close-btn {
+        margin-left: 650px;
+        margin-top: -59px;
+        cursor: pointer;
+    }
+
+    .total {
+        font-size: 30px;
+    }
+
+    .details {
+        height: fit-content;
+        width: fit-content;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 45px;
+        margin-top: -20px;
+    }
+
+    .label {
+        font-size: 30px;
+    }
+
+    input {
+        font-size: 30px;
+        width: 600px;
+    }
+
+    #confirm-button {
+        font-size: 30px;
+    }
+}

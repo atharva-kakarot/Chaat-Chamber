@@ -1,435 +1,72 @@
 <html>
-    <head>
-        <title>
-            Chaat Chamber
-        </title>
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: white;
-        }
-    
-        .navbar {
-            contain: content;
-            background-color: #001d3d;
-            padding: 10px;
-            margin: 0px -8px;
-            margin-top: -8px;
-        }
-    
-        #about {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin: 10px;
-            padding: 10px;
-        }
-        #home {
-            cursor: pointer;
-            font-size: 35px;
-            float: left;
-            border: none;
-            background-color: #001d3d;
-            font-family: 'Pacifico';
-            color: white;
-            margin: 5px 5px;
-        }
-    
-        #logout {
-            float: right;
-            cursor: pointer;
-            font-size: 30px;
-            background-color: #001d3d;
-            color: white;
-            margin-right: 15px;
-            margin: 10px;
-            padding: 10px 15px;
-        }
-        h1 {
-            font-family: 'Pacifico';
-            color: rgb(91, 91, 91);
-            font-size: 40px;
-            text-align: center;
-            font-weight: 500;
-        }
-        h2{
-            font-family: 'Pacifico';
-            color: rgb(91, 91, 91);
-            font-size: 30px;
-            text-align: center;
-            padding: 30px;
-            margin-bottom: -5px;
-            font-weight: 400;
-        }
 
-        .details{
-            width: 420px;
-            height: 795px;
-            background-color: rgb(212, 212, 212);
-            border-radius: 20px;
-            align-items: center;
-            margin-bottom: 30px;
-            margin-top: 30px;
-        }
-        .label
-        {
-            font-size: 20px;
-            font-family: 'Saira Condensed';
-        }
-        input
-        {
-            padding: 10px 0px;
-            border-radius: 5px;
-            border: none;
-            width: 300px;
-            margin: 10px 0px;
-            font-size: 20px;
-            font-family: 'Saira Condensed';
-        }
+<head>
+    <title>
+        Chaat Chamber
+    </title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Reddit+Mono:wght@200..900&family=Rubik+Doodle+Shadow&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Chaat Chamber/css/order summary.css">
 
-        .order-summary{
-            border-radius: 10px;
-            padding: 40px;
-        }
-        .order-list{
-            margin-top: -25px;
-        }
-        .orders{
-            background-color: rgb(212, 212, 212);
-            width: 700px;
-            border-radius: 20px;
-        }
-        h3, span
-        {
-            display: inline;
-            margin: 10px 60px;
-            font-family: 'Saira Condensed';
-            font-weight: 400;
-            font-size: 20px;
-        }
-        td{
-            padding: 5px 20px;
-            font-family: 'Saira Condensed';
-            font-size: 20px;
-        }
-        #confirm-button{
-            font-size: 20px;
-            font-family: 'Saira Condensed';
-            padding: 10px;
-            margin: 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: white;
-            cursor: pointer;
-        }
-        .total{
-            font-family: 'Saira Condensed';
-            font-weight: 400;
-            font-size: 20px;
-            padding: 30px;
-            margin-top: -10px;
-        }
-        #item-name{
-            display: flex;
-            margin-left: 120px;
-        }
-        #item-price{
-            display: flex;
-            margin-left: 335px;
-            margin-top: -40px;
-        }
-        #item-cart{
-            display: flex;
-            margin-left: 500px;
-            margin-top: -43px;
-        }
-        .close-btn{
-            display: flex;
-            margin-left: 580px;
-            margin-top: -40px;
-            cursor: pointer;
-        }
-
-        @media only screen and (max-width: 980px) {
-            #home{
-                font-size: 55px;
-                margin: 10px 10px;
-            }
-            #logout{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            #about{
-                font-size: 50px;
-                padding: 20px;
-                margin: 20px 5px;
-            }
-            h1{
-                font-size: 55px;
-            }
-            .orders{
-                width: 800px;
-            }
-            h3, span{
-                font-size: 30px;
-                margin: 10px 50px;
-            }
-            #priceheader{
-                margin-left: 115px;
-            }
-            #nameheader{
-                margin-left: 90px;
-            }
-            #item-name{
-                margin-left: 120px;
-            }
-            #item-price{
-                margin-left: 420px;
-                margin-top: -58px;
-            }
-            #item-cart{
-                margin-left: 600px;
-                margin-top: -59px;
-            }
-            .close-btn{
-                margin-left: 650px;
-                margin-top: -59px;
-                cursor: pointer;
-            }
-            .total{
-                font-size: 30px;
-            }
-            .details{
-                height: fit-content;
-                width: fit-content;
-                padding: 30px;
-            }
-            h2{
-                font-size: 45px;
-                margin-top: -20px;
-            }
-            .label{
-                font-size: 30px;
-            }
-            input{
-                font-size: 30px;
-                width: 600px;
-            }
-            #confirm-button{
-                font-size: 30px;
-            }
-        }
-    </style>
-    <body>
-        <center>
-            <div class="navbar">
-                <a href="index.html"><button id="home"><p style="color: red; display:inline">Chaat</p> <p style="color: orange; display:inline">Chamber</p></button></a>
-                <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
-                <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
+<body>
+    <center>
+        <div class="navbar">
+            <a href="index.html"><button id="home">
+                    <p style="color: red; display:inline">Chaat</p>
+                    <p style="color: orange; display:inline">Chamber</p>
+                </button></a>
+            <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
+            <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
+        </div>
+    </center>
+    <h1>Cart</h1>
+    <center>
+        <div class="orders">
+            <div class="order-summary">
+                <h3 id="nameheader">Name</h3>
+                <h3 id="priceheader">Price</h3>
+                <h3 id="quantityheader">Quantity</h3>
             </div>
-        </center>
-        <h1>Cart</h1>
-        <center>
-            <div class="orders">
-                <div class="order-summary">
-                    <h3 id="nameheader">Name</h3>
-                    <h3 id="priceheader">Price</h3>
-                    <h3 id="quantityheader">Quantity</h3>
-                </div>
-                <div class="order-list">
-                </div>
-                <h4 class="total"></h4>
+            <div class="order-list">
             </div>
-            
-        </center>
-        <center>
-            <div class="details">
-                <h2>Delivery Details</h2>
-                <table>
-                    <tr>
-                        <td><label class="label">Full Name:</label><br><input type="text" id="full-name"></td>
-                    </tr>
-                    <tr>
-                        <td><label class="label">Mobile Number:</label><br><input type="text" id="mobile-number"></td>
-                    </tr>
-                    <tr>
-                        <td><label class="label">Address:</label><br><input type="text" id="address"></td>
-                    </tr>
-                    <tr>
-                        <td><label class="label">City:</label><br><input type="text" id="city"></td>
-                    </tr>
-                    <tr>
-                        <td><label class="label">Pin Code:</label><br><input type="text" id="pin-code"></td>
-                    </tr>
-                </table>
-                <button id="confirm-button">Confirm</button>
-            </div>
-        </center>
-    </body>
-    <script>
-//---------------------------------------Adding event listeners to the logout button--------------------------------------------------------------
+            <h4 class="total"></h4>
+        </div>
 
-        let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
-        let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
+    </center>
+    <center>
+        <div class="details">
+            <h2>Delivery Details</h2>
+            <table>
+                <tr>
+                    <td><label class="label">Full Name:</label><br><input type="text" id="full-name"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">Mobile Number:</label><br><input type="text" id="mobile-number"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">Address:</label><br><input type="text" id="address"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">City:</label><br><input type="text" id="city"></td>
+                </tr>
+                <tr>
+                    <td><label class="label">Pin Code:</label><br><input type="text" id="pin-code"></td>
+                </tr>
+            </table>
+            <button id="confirm-button">Confirm</button>
+        </div>
+    </center>
+</body>
+<script src="/Chaat Chamber/js/order summary.js"></script>
 
-        let logoutBtn = () =>
-        {
-            sessionStorage.removeItem("user-object");
-            sessionStorage.removeItem("user-cred");
-            window.location.href = 'login page.html';
-            alert('User signed out!');
-        }
-
-       let checkInfo = () => 
-       {
-            if(!sessionStorage.getItem("user-cred"))
-            {
-                window.location.href = 'login page.html';
-            }
-        }       
-    window.addEventListener("load", checkInfo);
-    logout.addEventListener("click", logoutBtn);
-    
-//-----------------------------------Decrementing the cart number when removing an item from the list-----------------------------------------
-
-function cartNum() {
-    let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
-    let totalQuantity = 0;
-  
-    if (cartItems) 
-    {
-      for (const item of Object.values(cartItems)) {
-        totalQuantity += item.inCart;
-      }
-    }
-    localStorage.setItem("cart-items", JSON.stringify(totalQuantity));
-  }
-
-
-//-----------------------------------Function to calculate and set total cost-----------------------------------------------------------------------
-
-    function calculateTotalCost() 
-    {
-        let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
-        let totalCost = 0;
-
-        if (cartItems) 
-        {
-            // Loop through cart items and sum their prices
-            for (const item of Object.values(cartItems)) 
-            {
-                totalCost += item.price * item.inCart; // Consider quantity (inCart)
-            }
-        }
-
-        localStorage.setItem("total-cost", totalCost);
-    }
-
-//-----------------------------------------Displaying items in the cart------------------------------------------------------------------
-
-    function displayCart()
-    {
-        let cartItems = localStorage.getItem("productsInCart");
-        cartItems = JSON.parse(cartItems);
-
-        let itemContainer = document.querySelector(".order-list");
-
-        console.log(cartItems);
-        if (cartItems && itemContainer)
-        {
-            itemContainer.innerHTML = '';
-            Object.values(cartItems).map(function(item)
-            {
-                itemContainer.innerHTML += `
-                    <span class="item" id="item-name">${item.name}</span>
-                    <span class="item" id="item-price">${item.price}</span>
-                    <span class="item" id="item-cart">${item.inCart}</span>
-                    <span class="close-btn" data-item-name="${item.name}">x</span>`;
-            })
-
-            //Adding event listener to the close button
-            let closeButton = document.querySelectorAll(".close-btn");
-            closeButton.forEach(closeBtn => 
-            {
-                closeBtn.addEventListener("click", function (event) 
-                {
-                    let itemName = event.target.dataset.itemName;
-                    delete cartItems[itemName];
-                    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-                    cartNum();
-                    displayCart();
-                });
-            });
-            if (closeButton.length == 0) 
-            {
-                itemContainer.innerHTML = "Your cart is empty."
-                itemContainer.style.fontFamily = "Saira Condensed";
-                itemContainer.style.fontSize = "20px";
-            }
-        }
-        else
-        {
-            itemContainer.innerHTML = "Your cart is empty.";
-            itemContainer.style.fontFamily = "Saira Condensed";
-            itemContainer.style.fontSize = "20px";
-        }
-
-        calculateTotalCost();
-
-        let total = localStorage.getItem("total-cost");
-        document.querySelector(".total").innerHTML = 'Total:' + ' ' + total + ' Rs';
-    }
-    displayCart();
-
-//---------------------------------------Adding event listener to the confirm button-----------------------------------------------------------------
-    
-    let confirmBtn = document.getElementById("confirm-button");
-
-    confirmBtn.addEventListener("click", function()
-    {
-        let fullName = document.getElementById("full-name").value;
-        let mobileNum = document.getElementById("mobile-number").value;
-        let address = document.getElementById("address").value;
-        let city = document.getElementById("city").value;
-        let pinCode = document.getElementById("pin-code").value;
-        let itemContainer = document.querySelector(".order-list");
-
-        if (fullName === '' || mobileNum === '' || address === '' || city === '' || pinCode === '') 
-        {
-            alert("Fill up the required details!");
-            preventDefault();
-        }
-        else if (itemContainer.innerHTML === "Your cart is empty.")
-        {
-            alert("Your cart is empty!");
-            preventDefault();
-        }        
-
-        localStorage.setItem("fullName", JSON.stringify(fullName));
-        localStorage.setItem("mobileNum", JSON.stringify(mobileNum));
-        localStorage.setItem("address", JSON.stringify(address));
-        localStorage.setItem("city", JSON.stringify(city));
-        localStorage.setItem("pinCode", JSON.stringify(pinCode));
-
-        window.location.href = "bill.html";
-    })
-
-    document.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            confirmBtn.click();
-        }
-    });
-    </script>
-    
 </html>

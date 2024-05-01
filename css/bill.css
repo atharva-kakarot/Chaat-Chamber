@@ -1,0 +1,209 @@
+body {
+    background-color: white;
+}
+
+.navbar {
+    contain: content;
+    background-color: #001d3d;
+    padding: 10px;
+    margin: 0px -8px;
+    margin-top: -8px;
+}
+
+#about {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+#home {
+    cursor: pointer;
+    font-size: 35px;
+    float: left;
+    border: none;
+    background-color: #001d3d;
+    font-family: 'Pacifico';
+    color: white;
+    margin: 5px 5px;
+}
+
+#logout {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin-right: 15px;
+    margin: 10px;
+    padding: 10px 15px;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    color: rgb(91, 91, 91);
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Pacifico';
+    text-shadow: 3px 3px rgb(152, 152, 152);
+    color: rgb(91, 91, 91);
+    font-size: 40px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 20px;
+    font-family: 'Saira Condensed';
+}
+
+input {
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-family: 'Saira Condensed';
+}
+
+.order-summary {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 30px;
+}
+
+.order-list {
+    margin: 40px 0px;
+}
+
+h3 {
+    display: inline;
+    margin: 10px 76px;
+    font-family: 'Saira Condensed';
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+#header-name {
+    margin-left: 125px;
+}
+
+td {
+    padding: 5px 20px;
+    font-family: 'Saira Condensed';
+    font-size: 20px;
+}
+
+.total {
+    font-family: 'Saira Condensed';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+.item-name {
+    display: flex;
+}
+
+.item-price {
+    display: flex;
+    margin-left: 330px;
+    margin-top: -40px;
+}
+
+.item-cart {
+    display: flex;
+    margin-left: 540px;
+    margin-top: -43px;
+}
+
+.close-btn {
+    display: flex;
+    margin-left: 600px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+table {
+    display: inline-block;
+}
+
+#confirmBtn {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-family: 'Saira Condensed';
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(212, 212, 212);
+    border: none;
+    cursor: pointer;
+}
+
+#address-area {
+    max-width: 300px;
+}
+
+
+@media only screen and (max-width: 980px) {
+    #home {
+        font-size: 55px;
+        margin: 10px 10px;
+    }
+
+    #logout {
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    #about {
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .total {
+        font-size: 30px;
+    }
+
+    td {
+        font-size: 30px;
+    }
+
+    .item-price {
+        margin-left: 360px;
+        margin-top: -60px;
+    }
+
+    .item-cart {
+        margin-left: 580px;
+        margin-top: -63px;
+    }
+
+    #confirmBtn {
+        font-size: 30px;
+    }
+}
