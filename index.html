@@ -130,6 +130,50 @@
             margin: 10px;
             color: white;
         }
+
+        @media only screen and (max-width: 980px) {
+            #home{
+                font-size: 55px;
+                margin: 10px 10px;
+            }
+            #cart{
+                font-size: 50px;
+                padding: 20px;
+                margin: 20px 5px;
+            }
+            #logout{
+                font-size: 50px;
+                padding: 20px;
+                margin: 20px 5px;
+            }
+            #about{
+                font-size: 50px;
+                padding: 20px;
+                margin: 20px 5px;
+            }
+            h1{
+                font-size: 55px;
+            }
+            .card{
+                width: 450px;
+                height: 550px;
+            }
+            .menu {
+                width: 400px;
+                height: 400px;
+            }
+            .buy-now{
+                font-size: 30px;
+                margin: 28px 0px;
+            }
+            .menu-text{
+                font-size: 30px;
+            }
+            #cardsix{
+                overflow: hidden;
+                text-wrap: nowrap;
+            }
+        }
     </style>
     <body>
         <center>
@@ -186,7 +230,7 @@
                 <div class="card">
                     <div class="menu">
                         <img src="https://www.funfoodfrolic.com/wp-content/uploads/2022/03/Kachori-Blog.jpg" alt="khasta kachori">
-                        <div class="menu-text">Khasta Kachori Kingdom<br>Rs.40</div>
+                        <div class="menu-text" id="cardsix">Khasta Kachori Kingdom<br>Rs.40</div>
                         <button class="buy-now">Add to cart</button>
                     </div>
                 </div>
@@ -332,7 +376,6 @@
         }
     }
     onLoadCartNumbers();
-    
     
     </script>
 </html>

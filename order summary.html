@@ -158,6 +158,77 @@
             margin-top: -40px;
             cursor: pointer;
         }
+
+        @media only screen and (max-width: 980px) {
+            #home{
+                font-size: 55px;
+                margin: 10px 10px;
+            }
+            #logout{
+                font-size: 50px;
+                padding: 20px;
+                margin: 20px 5px;
+            }
+            #about{
+                font-size: 50px;
+                padding: 20px;
+                margin: 20px 5px;
+            }
+            h1{
+                font-size: 55px;
+            }
+            .orders{
+                width: 800px;
+            }
+            h3, span{
+                font-size: 30px;
+                margin: 10px 50px;
+            }
+            #priceheader{
+                margin-left: 115px;
+            }
+            #nameheader{
+                margin-left: 90px;
+            }
+            #item-name{
+                margin-left: 120px;
+            }
+            #item-price{
+                margin-left: 420px;
+                margin-top: -58px;
+            }
+            #item-cart{
+                margin-left: 600px;
+                margin-top: -59px;
+            }
+            .close-btn{
+                margin-left: 650px;
+                margin-top: -59px;
+                cursor: pointer;
+            }
+            .total{
+                font-size: 30px;
+            }
+            .details{
+                height: fit-content;
+                width: fit-content;
+                padding: 30px;
+            }
+            h2{
+                font-size: 45px;
+                margin-top: -20px;
+            }
+            .label{
+                font-size: 30px;
+            }
+            input{
+                font-size: 30px;
+                width: 600px;
+            }
+            #confirm-button{
+                font-size: 30px;
+            }
+        }
     </style>
     <body>
         <center>
@@ -171,9 +242,9 @@
         <center>
             <div class="orders">
                 <div class="order-summary">
-                    <h3>Name</h3>
-                    <h3>Price</h3>
-                    <h3>Quantity</h3>
+                    <h3 id="nameheader">Name</h3>
+                    <h3 id="priceheader">Price</h3>
+                    <h3 id="quantityheader">Quantity</h3>
                 </div>
                 <div class="order-list">
                 </div>
