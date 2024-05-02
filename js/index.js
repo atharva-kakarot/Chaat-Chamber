@@ -27,6 +27,33 @@ let products = [
         inCart: 0
     }
 ]
+//---------------------------------Adding event listener to mode button--------------------------------------------------------
+
+let mode = document.getElementById("mode")
+
+mode.addEventListener("click", function(){
+    document.body.classList.toggle("black");
+    document.body.style.transition = "0.5s";
+    welcomeText.classList.toggle("white");
+
+    let menuText = document.querySelectorAll(".menu-text")
+    
+    for (let i = 0; i < menuText.length; i++ ){
+        menuText[i].classList.toggle("menu-text-color");
+    }
+
+    let card = document.querySelectorAll(".card")
+
+    card.forEach(card => {
+        card.addEventListener("mouseenter", function() {
+          card.classList.toggle("grey");
+        });
+    
+        card.addEventListener("mouseleave", function() {
+          card.classList.remove("grey"); 
+        });
+      });  
+})
 
 //---------------------------------Adding event listeners to the logout button and window--------------------------------------
 

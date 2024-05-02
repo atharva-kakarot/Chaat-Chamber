@@ -31,6 +31,18 @@ body {
     margin: 5px 5px;
 }
 
+#mode{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin-right: 15px;
+    margin: 10px;
+    padding: 10px 15px;
+
+}
+
 #logout {
     float: right;
     cursor: pointer;
@@ -121,6 +133,28 @@ h1 {
     margin: 10px;
     color: white;
 }
+
+/*-----------------------------------------------CSS for JavaScript-----------------------------------------------------------*/
+
+.black{
+    background-color: black;
+    transition: 0.5s;
+}
+
+.white{
+    color: white;
+}
+
+.menu-text-color{
+    color: white;
+}
+
+.grey:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 980px) {
     #home {
