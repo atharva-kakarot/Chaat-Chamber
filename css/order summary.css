@@ -31,6 +31,17 @@ body {
     margin: 5px 5px;
 }
 
+#mode{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #001d3d;
+    color: white;
+    margin-right: 15px;
+    margin: 10px;
+    padding: 10px 15px;
+}
+
 #logout {
     float: right;
     cursor: pointer;
@@ -122,7 +133,6 @@ td {
     margin: 20px;
     border-radius: 5px;
     border: none;
-    background-color: white;
     cursor: pointer;
 }
 
@@ -157,6 +167,27 @@ td {
     margin-top: -40px;
     cursor: pointer;
 }
+
+/*-----------------------------------------CSS for JavaScript-----------------------------------------------------------------------------*/
+
+.black{
+    background-color: black;
+}
+
+.grey{
+    background-color: rgb(43, 43, 43);
+}
+
+.white{
+    color: white;
+}
+
+.grey-confirm-button{
+    background-color: rgb(79, 79, 79);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
 
 @media only screen and (max-width: 980px) {
     #home {

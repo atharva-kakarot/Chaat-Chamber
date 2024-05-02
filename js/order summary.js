@@ -1,3 +1,44 @@
+//--------------------------------------Adding event listener to mode button----------------------------------------------------------------------
+
+let mode = document.getElementById("mode")
+
+mode.addEventListener("click", function(){
+    document.body.classList.toggle("black");
+    document.body.style.transition = "0.5s";
+
+    document.querySelector("h1").classList.toggle("white");
+    document.querySelector("h1").style.transition = "0.5s";
+
+    document.querySelector(".order-summary").classList.toggle("white");
+    document.querySelector(".order-summary").style.transition = "0.5s";
+
+    document.querySelector(".order-list").classList.toggle("white");
+    document.querySelector(".order-list").style.transition = "0.5s";
+
+    document.querySelector(".total").classList.toggle("white");
+    document.querySelector(".total").style.transition = "0.5s";
+
+    document.querySelector(".orders").classList.toggle("grey");
+    document.querySelector(".orders").style.transition = "0.5s";
+
+    document.querySelector(".details").classList.toggle("grey");
+    document.querySelector(".details").style.transition = "0.5s";
+
+    let label = document.querySelectorAll("label")
+    label.forEach(label =>{
+        label.classList.toggle("white")
+        label.style.transition = "0.5s";
+    })
+
+    document.querySelector("h2").classList.toggle("white");
+    document.querySelector("h2").style.transition = "0.5s";
+
+    document.querySelector("#confirm-button").classList.toggle("grey-confirm-button");
+    document.querySelector("#confirm-button").classList.toggle("white");
+    document.querySelector("#confirm-button").style.transition = "0.5s";
+})
+
+
 //---------------------------------------Adding event listeners to the logout button--------------------------------------------------------------
 
 let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
