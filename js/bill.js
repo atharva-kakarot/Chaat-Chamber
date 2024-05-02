@@ -1,3 +1,31 @@
+//--------------------------------------------Adding event listener to mode button---------------------------------------------------------
+
+let mode = document.getElementById("mode")
+
+mode.addEventListener("click", function(){
+    document.body.classList.toggle("black");
+    document.body.style.transition = "0.5s"; 
+
+    document.querySelector("h1").classList.toggle("white")
+    document.querySelector("h1").style.transition = "0.5s";
+
+    document.querySelector(".order-summary").classList.toggle("grey");
+    document.querySelector(".order-summary").classList.toggle("white");
+    document.querySelector(".order-summary").style.transition = "0.5s";
+
+    document.querySelector("table").classList.toggle("white");
+    document.querySelector("table").style.transition = "0.5s";
+
+    document.querySelector("table").style.transition = "0.5s";
+
+    document.querySelector("#confirmBtn").classList.toggle("grey-confirm-button");
+    document.querySelector("#confirmBtn").classList.toggle("white");
+    document.querySelector("#confirmBtn").style.transition = "0.5s"
+
+})
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
 let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
 let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
 
@@ -54,7 +82,7 @@ let pinCode = JSON.parse(localStorage.getItem("pinCode"));
 
 console.log(fullName);
 document.querySelector(".delivery-details").innerHTML = `
-    <table >
+    <table>
         <tr>
             <td>Full Name:</td>
             <td>${fullName}</td>
