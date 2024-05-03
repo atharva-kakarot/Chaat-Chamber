@@ -195,6 +195,11 @@ td {
         margin: 10px 10px;
     }
 
+    #mode{
+        font-size: 50px;
+        margin: 30px 15px;
+    }
+
     #logout {
         font-size: 50px;
         padding: 20px;
