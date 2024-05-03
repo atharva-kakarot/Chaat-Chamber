@@ -25,7 +25,6 @@
                         style="color: orange">Chamber</span></button></a>
             <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
             <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
-            <i class="fa-solid fa-circle-half-stroke" id="mode"></i>
         </div>
     </center>
     <h1>Order Summary</h1>
@@ -45,5 +44,11 @@
     </center>
 </body>
 <script src="..\Chaat-Chamber\js\bill.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+</script>
 </html>

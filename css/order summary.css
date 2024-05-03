@@ -31,16 +31,6 @@ body {
     margin: 5px 5px;
 }
 
-#mode{
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: #001d3d;
-    color: white;
-    margin-right: 15px;
-    margin: 10px;
-    padding: 10px 15px;
-}
 
 #logout {
     float: right;
@@ -168,23 +158,6 @@ td {
     cursor: pointer;
 }
 
-/*-----------------------------------------CSS for JavaScript-----------------------------------------------------------------------------*/
-
-.black{
-    background-color: black;
-}
-
-.grey{
-    background-color: rgb(43, 43, 43);
-}
-
-.white{
-    color: white;
-}
-
-.grey-confirm-button{
-    background-color: rgb(79, 79, 79);
-}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -195,10 +168,6 @@ td {
         margin: 10px 10px;
     }
 
-    #mode{
-        font-size: 50px;
-        margin: 30px 15px;
-    }
 
     #logout {
         font-size: 50px;
