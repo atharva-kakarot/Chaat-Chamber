@@ -1,7 +1,29 @@
+//---------------------------------Adding event listener to profile icon-------------------------------------------------------
+
+
+let profileIcon = document.getElementById("profile-icon");
+let profileDash = document.querySelector(".profile-dash");
+
+profileIcon.addEventListener('click', toggleDash);
+
+function toggleDash() {
+    profileDash.classList.toggle("display-none");
+}
+
+window.addEventListener("load", toggleDash());
+
+
 //---------------------------------------Adding event listeners to the logout button--------------------------------------------------------------
 
 let userInfo = JSON.parse(sessionStorage.getItem("user-object"));
 let userCred = JSON.parse(sessionStorage.getItem("user-cred"));
+
+let profileUserCredMob = document.querySelector("#profile-dash-usercred-mobile");
+let profileUserCred = document.querySelector("#profile-dash-usercred");
+
+profileUserCred.innerText = userCred;
+profileUserCredMob.innerText = userCred;
+
 
 let logoutBtn = () => {
     sessionStorage.removeItem("user-object");
@@ -81,7 +103,7 @@ function displayCart() {
         });
         if (closeButton.length == 0) {
             itemContainer.innerHTML = "Your cart is empty."
-            itemContainer.style.fontFamily = "Saira Condensed";
+            itemContainer.style.fontFamily = "Didact Gothic";
             itemContainer.style.fontSize = "20px";
         }
     }

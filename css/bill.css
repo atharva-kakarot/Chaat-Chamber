@@ -1,5 +1,6 @@
-body {
-    background-color: white;
+body{
+    background-color: #1c1c1c;
+    color: white;
 }
 
 .navbar {
@@ -8,6 +9,65 @@ body {
     padding: 10px;
     margin: 0px -8px;
     margin-top: -8px;
+}
+
+#profile-icon{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.display-none{
+    display: none;
+}
+
+.profile-dash{
+    height: fit-content;
+    box-shadow: 0 0 0 1px rgb(161, 161, 161);
+    margin-top: -15px; 
+    float: right;
+    margin-right: 96px;
+    contain: content;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#profile-dash-usercred{
+    font-family: "Didact Gothic";
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+    display: inline;
+}
+
+#profile-dash-usercred-mobile{
+    display: none;
+}
+
+.profile-buttons-text{
+    font-size: 25px;
+    font-family: 'Didact Gothic';
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+#logout-button-text{
+    margin-left: 28px;
+    display: inline;
+}
+
+#logout {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    color: #001d3d;
+    margin: 10px;
 }
 
 #about {
@@ -32,29 +92,18 @@ body {
 }
 
 
-#logout {
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: #001d3d;
-    color: white;
-    margin-right: 15px;
-    margin: 10px;
-    padding: 10px 15px;
-}
-
 h1 {
-    font-family: 'Pacifico';
-    color: rgb(91, 91, 91);
+    font-family: 'Didact Gothic';
+    color: white;
     font-size: 40px;
-    text-align: center;
     font-weight: 400;
+    width: fit-content;
 }
 
 h2 {
-    font-family: 'Pacifico';
+    font-family: 'Didact Gothic';
     text-shadow: 3px 3px rgb(152, 152, 152);
-    color: rgb(91, 91, 91);
+    color: white;
     font-size: 40px;
     text-align: center;
     font-size: 30px;
@@ -64,7 +113,7 @@ h2 {
 
 .label {
     font-size: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
 }
 
 input {
@@ -74,13 +123,13 @@ input {
     width: 300px;
     margin: 10px 0px;
     font-size: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
 }
 
 .order-summary {
     width: fit-content;
     height: fit-content;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(70, 70, 70);
     border-radius: 10px;
     padding: 40px;
     margin: 30px;
@@ -93,44 +142,65 @@ input {
 h3 {
     display: inline;
     margin: 10px 76px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-weight: 400;
     font-size: 20px;
-
-}
-
-#header-name {
-    margin-left: 125px;
+    color: white;
 }
 
 td {
     padding: 5px 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-size: 20px;
 }
 
 .total {
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-weight: 400;
     font-size: 20px;
     text-align: center;
     margin: 30px;
 }
 
+#header-name {
+    align-items: center;
+    justify-content: left;
+    margin-left: 150px;
+    
+}
+
+#header-price{
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+#header-quantity{
+    align-items: center;
+    justify-content: right;
+}
+
 .item-name {
     display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .item-price {
     display: flex;
-    margin-left: 330px;
-    margin-top: -40px;
+    margin-top: -38px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .item-cart {
     display: flex;
-    margin-left: 540px;
-    margin-top: -43px;
+    margin-right: 110px;
+    margin-top: -38px;
+    align-items: center;
+    justify-content: right;
+
 }
 
 .close-btn {
@@ -138,6 +208,7 @@ td {
     margin-left: 600px;
     margin-top: -40px;
     cursor: pointer;
+
 }
 
 table {
@@ -145,13 +216,15 @@ table {
 }
 
 #confirmBtn {
-    padding: 10px 20px;
+    padding: 10px;
     margin-bottom: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-size: 20px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    background-color: rgb(70, 70, 70);
+    color: white;
 }
 
 #address-area {
@@ -168,15 +241,33 @@ table {
         margin: 20px 10px;
     }
 
-    #mode{
-        font-size: 50px;
-        margin: 30px 15px;
-    }
-
     #logout {
         font-size: 50px;
         padding: 20px;
         margin: 20px 5px;
+    }
+
+    #profile-icon{
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    #profile-dash-usercred{
+        display: none;
+    }
+
+    #profile-dash-usercred-mobile{
+        display: block;
+        margin: 0;
+        font-family: "Didact Gothic";
+        font-size: 40px;
+        font-weight: 700;
+        color: #001d3d;
+    }
+
+    .profile-buttons-text{
+        font-size: 40px;
     }
 
     #about {
@@ -187,6 +278,15 @@ table {
 
     h1 {
         font-size: 55px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 80px;
+        z-index: -1;
+    }
+    .order-summary{
+        margin-top: 250px;
     }
 
     h3 {
@@ -201,13 +301,23 @@ table {
         font-size: 30px;
     }
 
+    #header-name{
+        margin-left: 120px;
+    }
+
+    #header-price{
+        margin-left: 75px;
+    }
+
+    .item-name{
+        margin: 20px 5px;
+    }
+
     .item-price {
-        margin-left: 360px;
         margin-top: -60px;
     }
 
     .item-cart {
-        margin-left: 580px;
         margin-top: -63px;
     }
 

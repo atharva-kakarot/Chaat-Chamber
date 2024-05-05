@@ -1,5 +1,6 @@
-body {
-    background-color: white;
+body{
+    background-color: #1c1c1c;
+    color: white;
 }
 
 .navbar {
@@ -8,6 +9,64 @@ body {
     padding: 10px;
     margin: 0px -8px;
     margin-top: -8px;
+}
+
+#profile-icon{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.display-none{
+    display: none;
+}
+
+.profile-dash{
+    height: fit-content;
+    box-shadow: 0 0 0 1px rgb(161, 161, 161);
+    margin-top: -15px; 
+    float: right;
+    margin-right: 99.5px;
+    contain: content;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#profile-dash-usercred{
+    font-family: "Didact Gothic";
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+    display: inline;
+}
+
+#profile-dash-usercred-mobile{
+    display: none;
+}
+
+.profile-buttons-text{
+    font-size: 25px;
+    font-family: 'Didact Gothic';
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+#logout-button-text{
+    margin-left: 28px;
+    display: inline;
+}
+
+#logout {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    color: #001d3d;
+    margin: 10px;
 }
 
 #about {
@@ -31,29 +90,15 @@ body {
     margin: 5px 5px;
 }
 
-
-#logout {
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: #001d3d;
-    color: white;
-    margin-right: 15px;
-    margin: 10px;
-    padding: 10px 15px;
-}
-
 h1 {
-    font-family: 'Pacifico';
-    color: rgb(91, 91, 91);
+    font-family: 'Didact Gothic';
     font-size: 40px;
-    text-align: center;
     font-weight: 500;
+    width: fit-content;
 }
 
 h2 {
-    font-family: 'Pacifico';
-    color: rgb(91, 91, 91);
+    font-family: 'Didact Gothic';
     font-size: 30px;
     text-align: center;
     padding: 30px;
@@ -63,8 +108,8 @@ h2 {
 
 .details {
     width: 420px;
-    height: 795px;
-    background-color: rgb(212, 212, 212);
+    height: 720px;
+    background-color: rgb(70, 70, 70);
     border-radius: 20px;
     align-items: center;
     margin-bottom: 30px;
@@ -73,7 +118,8 @@ h2 {
 
 .label {
     font-size: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
+    color: white;
 }
 
 input {
@@ -83,7 +129,8 @@ input {
     width: 300px;
     margin: 10px 0px;
     font-size: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
+    background-color: rgb(198, 198, 198);
 }
 
 .order-summary {
@@ -96,8 +143,8 @@ input {
 }
 
 .orders {
-    background-color: rgb(212, 212, 212);
-    width: 700px;
+    background-color: rgb(70, 70, 70);
+    width: fit-content;
     border-radius: 20px;
 }
 
@@ -105,57 +152,83 @@ h3,
 span {
     display: inline;
     margin: 10px 60px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-weight: 400;
     font-size: 20px;
 }
 
+#nameheader{
+    align-items: center;
+    justify-content: left;
+}
+
+#priceheader{
+    align-items: center;
+    justify-content: center;
+    margin-left: 84px;
+}
+#quantityheader{
+    align-items: center;
+    justify-content: right;
+}
+
 td {
     padding: 5px 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-size: 20px;
 }
 
 #confirm-button {
     font-size: 20px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    background-color: rgb(198, 198, 198);
 }
 
 .total {
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-weight: 400;
     font-size: 20px;
     padding: 30px;
     margin-top: -10px;
 }
 
-#item-name {
+.item{
     display: flex;
-    margin-left: 120px;
+    margin: 20px;
+}
+
+#item-name {
+    align-items: center;
+    justify-content: left;
+    margin-left: 50px;
 }
 
 #item-price {
-    display: flex;
-    margin-left: 335px;
-    margin-top: -40px;
+    margin-top: -47px;
+    align-items: center;
+    justify-content: center;
 }
 
 #item-cart {
-    display: flex;
-    margin-left: 500px;
-    margin-top: -43px;
+    align-items: center;
+    justify-content: right;
+    margin-right: 135px;
+    margin-top: -47px;
 }
 
 .close-btn {
+    align-items: center;
+    justify-content: right;
     display: flex;
     margin-left: 580px;
-    margin-top: -40px;
+    margin-top: -48px;
     cursor: pointer;
+    width: fit-content;
 }
 
 
@@ -173,6 +246,28 @@ td {
         font-size: 50px;
         padding: 20px;
         margin: 20px 5px;
+    }
+
+    #profile-icon{
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    #profile-dash-usercred{
+        display: none;
+    }
+
+    #profile-dash-usercred-mobile{
+        display: inline;
+        font-family: "Didact Gothic";
+        font-size: 40px;
+        font-weight: 700;
+        color: #001d3d;
+    }
+
+    .profile-buttons-text{
+        font-size: 40px;
     }
 
     #about {
@@ -195,30 +290,17 @@ td {
         margin: 10px 50px;
     }
 
-    #priceheader {
-        margin-left: 115px;
-    }
-
-    #nameheader {
-        margin-left: 90px;
-    }
-
-    #item-name {
-        margin-left: 120px;
-    }
-
     #item-price {
-        margin-left: 420px;
         margin-top: -58px;
     }
 
     #item-cart {
-        margin-left: 600px;
+        margin-right: 205px;
         margin-top: -59px;
     }
 
     .close-btn {
-        margin-left: 650px;
+        margin-left: 700px;
         margin-top: -59px;
         cursor: pointer;
     }

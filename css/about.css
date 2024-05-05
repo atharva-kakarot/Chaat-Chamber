@@ -1,5 +1,6 @@
-body {
-    background-color: white;
+body{
+    background-color: #1c1c1c;
+    color: white;
 }
 
 .navbar {
@@ -23,17 +24,15 @@ body {
 
 
 h1 {
-    font-family: 'Pacifico';
-    color: rgb(88, 88, 88);
+    font-family: 'Didact Gothic';
     font-weight: 500;
 }
 
 p {
     text-align: left;
     font-size: 25px;
-    font-family: 'Pacifico';
+    font-family: 'Didact Gothic';
     width: 95%;
-    color: rgb(88, 88, 88);
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------*/

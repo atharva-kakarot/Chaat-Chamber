@@ -5,6 +5,7 @@
         Chaat Chamber
     </title>
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +27,21 @@
                     <p style="color: orange; display:inline">Chamber</p>
                 </button></a>
             <a href="about.html"><i class="fa-solid fa-circle-info" id="about"></i></a>
-            <i class="fa fa-sign-out" id="logout" aria-hidden="true"></i>
+            <i class="fa-solid fa-user" id="profile-icon"><p id="profile-dash-usercred"></p></i>
+        </div>
+        <div class="profile-dash">
+            <p id="profile-dash-usercred-mobile"></p>
+            <table>
+                <tr>
+                    <td><i class="fa fa-sign-out" id="logout" aria-hidden="true"><p class="profile-buttons-text"
+                                id="logout-button-text">Logout</p></i></td>
+                </tr>
+            </table>
         </div>
     </center>
-    <h1>Cart</h1>
+    <center>
+        <h1>Cart</h1>
+    </center>
     <center>
         <div class="orders">
             <div class="order-summary">
@@ -68,11 +80,4 @@
     </center>
 </body>
 <script src="..\Chaat-Chamber\js\order summary.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-    function addDarkmodeWidget() {
-      new Darkmode().showWidget();
-    }
-    window.addEventListener('load', addDarkmodeWidget);
-  </script>
 </html>

@@ -1,13 +1,57 @@
-body {
-    background-color: white;
+body{
+    background-color: #1c1c1c;
+    color: white;
 }
-
 .navbar {
     contain: content;
     background-color: #001d3d;
     padding: 10px;
     margin: 0px -8px;
     margin-top: -8px;
+}
+
+#profile-icon{
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.display-none{
+    display: none;
+}
+
+.profile-dash{
+    height: fit-content;
+    box-shadow: 0 0 0 1px rgb(161, 161, 161);
+    margin-top: -15px; 
+    float: right;
+    margin-right: 99.5px;
+    contain: content;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#profile-dash-usercred{
+    font-family: "Didact Gothic";
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+}
+
+.profile-buttons-text{
+    font-size: 25px;
+    font-family: 'Didact Gothic';
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+#logout-button-text{
+    margin-left: 28px;
 }
 
 #about {
@@ -31,21 +75,48 @@ body {
     margin: 5px 5px;
 }
 
-
-#logout {
-    float: right;
+#cart {
+    font-size: 25px;
+    border: none;
+    background-color: white;
     cursor: pointer;
-    font-size: 30px;
-    background-color: #001d3d;
-    color: white;
-    margin-right: 15px;
+    color: #001d3d;
     margin: 10px;
-    padding: 10px 15px;
 }
 
-.menu-items {
-    margin-top: 50px;
-    margin-bottom: 100px;
+#logout {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    color: #001d3d;
+    padding: 1px 13.5px;
+    margin: 10px;
+}
+
+.category-list{
+    margin-top: 200px;
+    margin-bottom: -100px;
+}
+
+.category{
+    font-family: 'Didact Gothic';
+    font-size: 20px;
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgb(42, 42, 42);
+    transition: 0.5s;
+}
+.category:hover{
+    background-color: rgb(70, 70, 70);
+    transition: 0.5s;
+}
+
+.menu-items{
+    margin: 150px 0px;
+    margin-top: 20px;
 }
 
 .menu {
@@ -58,35 +129,38 @@ body {
 .menu img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 25px;
 }
 
 .card {
-    height: 475px;
+    height: 460px;
     width: 400px;
     border: none;
-    border-radius: 20px;
-    display: flex;
+    border-radius: 10px;
     display: inline-block;
     font-size: 20px;
     transition: 0.5s;
+    margin: 10px;
+    contain: content;
 }
 
 .card:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(70, 70, 70);
     transition: 0.5s;
+    height: 540px;
 }
 
 .buy-now {
     padding: 10px 8px;
     font-size: 20px;
     border-radius: 5px;
-    background-color: rgb(0, 123, 255);
-    color: white;
+    background-color: rgb(153, 255, 0);
+    box-shadow: 0 0 1px rgb(0, 255, 0);
+    color: black;
     border: none;
     float: right;
-    margin: 15px;
+    margin: 15px 0px;
     font-family: 'Saira Condensed';
     transition: 0.5s;
 }
@@ -96,31 +170,48 @@ body {
     transition: 0.5s;
 }
 
+.buy-now:active {
+    background-color: green;
+}
+
 .menu-text {
     width: 196px;
-    margin: 15px;
+    margin: 15px 0px;
     float: left;
     text-align: left;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
+}
+
+.item-description {
+    max-width: 230px;
+    margin-top: -15px;
+    text-align: left;
+    font-family: 'Didact Gothic';
+    font-size: 15px;
+    float: left;
+    opacity: 0;
 }
 
 h1 {
-    font-family: 'Pacifico';
-    color: rgb(88, 88, 88);
+    font-family: 'Didact Gothic';
+    color: white;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 400;
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: -140px;
+    z-index: -1;
 }
 
-#cart {
-    float: right;
-    font-size: 30px;
-    border: none;
-    background-color: #001d3d;
-    margin-right: 15px;
-    padding: 10px;
-    cursor: pointer;
-    margin: 10px;
-    color: white;
+#cardsix {
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+#profile-dash-usercred-mobile{
+    display: none;
 }
 
 
@@ -132,32 +223,73 @@ h1 {
         margin: 20px 10px;
     }
 
+    #profile-icon{
+        font-size: 50px;
+        padding: 20px;
+        margin: 20px 5px;
+    }
+
+    #profile-dash-usercred{
+        display: none;
+    }
+
+    #profile-dash-usercred-mobile{
+        display: inline;
+        font-family: "Didact Gothic";
+        font-size: 40px;
+        font-weight: 700;
+        color: #001d3d;
+    }
+
+    .profile-buttons-text{
+        font-size: 40px;
+    }
 
     #cart {
         font-size: 50px;
         padding: 20px;
-        margin: 20px 5px;
+        margin: 0px 5px;
     }
 
-    #logout {
+    #about{
         font-size: 50px;
         padding: 20px;
         margin: 20px 5px;
     }
 
-    #about {
+    #logout{
         font-size: 50px;
         padding: 20px;
-        margin: 20px 5px;
+        margin: 0px 5px;
+        margin-left: 15px;
     }
 
     h1 {
         font-size: 55px;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: -220px;
+    }
+
+    .category-list{
+        margin-top: 300px;
+    }
+
+    .menu-items{
+        margin-top: 30px;
+        margin-bottom: 250px;
     }
 
     .card {
         width: 450px;
         height: 550px;
+    }
+
+    .card:hover{
+        height: 740px;
     }
 
     .menu {
@@ -172,6 +304,10 @@ h1 {
 
     .menu-text {
         font-size: 30px;
+    }
+
+    .item-description{
+        font-size: 20px;
     }
 
     #cardsix {
