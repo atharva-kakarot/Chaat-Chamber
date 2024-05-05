@@ -1,10 +1,13 @@
 body {
     background-color: white;
+    background-image: url("../images/fried-dumplings-samosas-ready-eat-generated-by-ai.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
-    font-family: 'Pacifico';
-    color: rgb(88, 88, 88);
+    font-family: 'Didact Gothic';
+    color: white;
     margin: 40px;
     text-align: center;
     font-weight: 500;
@@ -22,7 +25,7 @@ h1 {
 .label {
     font-size: 25px;
     margin: 8px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     color: white;
 }
 
@@ -32,18 +35,18 @@ h1 {
     border: none;
     padding: 5px 10px;
     margin: 10px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
 }
 
 .form-button {
-    padding: 10px 20px;
+    padding: 15px 10px;
     font-size: 20px;
     margin: 10px;
     border-radius: 5px;
     border: none;
     margin-top: 20px;
     background-color: white;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     font-weight: 500;
 }
 
@@ -53,12 +56,12 @@ h1 {
 
 .tab {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 15px 10px;
     margin: 20px 10px;
     font-size: 20px;
     background-color: #001d3d;
     border-radius: 5px;
-    font-family: 'Saira Condensed';
+    font-family: 'Didact Gothic';
     cursor: pointer;
     color: white;
 }
@@ -68,8 +71,8 @@ a {
 }
 
 #register {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: white;
     font-weight: 500;
 }
 
@@ -88,7 +91,7 @@ a {
 
     .tab {
         font-size: 50px;
-        padding: 20px 20px;
+        padding: 25px 20px;
         margin-top: 30%;
         margin: 50px 10px;
     }
