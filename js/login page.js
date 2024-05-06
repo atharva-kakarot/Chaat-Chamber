@@ -51,6 +51,7 @@ login.addEventListener("click", function (event) {
 
             window.location.href = "index.html";
             sessionStorage.setItem("user-cred", JSON.stringify(email));
+            localStorage.setItem("selectedFunction", "classicChaatFunc");
         })
         .catch((error) => {
             const errorCode = error.code;

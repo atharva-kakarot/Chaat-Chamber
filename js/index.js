@@ -81,11 +81,31 @@ let tikkiBasedChaatList = document.getElementById("tikki-based-chaats-list");
 let friedSnackChaatList = document.getElementById("fried-snack-chaats-list");
 let regionalSpecialitiesList = document.getElementById("regional-specialities-list");
 
-classicChaat.addEventListener("click", classicChaatFunc);
-dahiBasedChaat.addEventListener("click", dahiBasedChaatFunc);
-tikkiBasedChaat.addEventListener("click", tikkiBasedChaatFunc);
-friedSnackChaat.addEventListener("click", friedSnackChaatFunc);
-regionalSpecialities.addEventListener("click", regionalSpecialitiesFunc);
+
+classicChaat.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "classicChaatFunc");
+    classicChaatFunc();
+});
+
+dahiBasedChaat.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "dahiBasedChaatFunc");
+    dahiBasedChaatFunc();
+});
+
+tikkiBasedChaat.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "tikkiBasedChaatFunc");
+    tikkiBasedChaatFunc();
+});
+
+friedSnackChaat.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "friedSnackChaatFunc");
+    friedSnackChaatFunc();
+});
+
+regionalSpecialities.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "regionalSpecialitiesChaatFunc");
+    regionalSpecialitiesFunc();
+});
 
 function classicChaatFunc(){
     dahiBasedChaatList.style.display = "none";
@@ -157,7 +177,12 @@ function regionalSpecialitiesFunc(){
     classicChaat.style.backgroundColor = "rgb(42, 42, 42)";
 }
 
-window.addEventListener("load", classicChaatFunc());
+window.addEventListener("load", function() {
+    let selectedFunction = localStorage.getItem("selectedFunction");
+    if (selectedFunction) {
+      window[selectedFunction]();
+    }
+  });
 
 
 //---------------------------------JavaScript for card hover event-------------------------------------------------------------
@@ -208,6 +233,7 @@ welcomeText.innerText = "Welcome! Discover our mouth watering delights!";
 let logoutBtn = () => {
     sessionStorage.removeItem("user-object");
     sessionStorage.removeItem("user-cred");
+    localStorage.removeItem("selectedFunction");
     window.location.href = 'login page.html';
     alert('User signed out!');
 }
