@@ -68,19 +68,24 @@ let products = [{
 ]
 
 //--------------------------------JavaScript for category tabs----------------------------------------------------------------
-
+let allChat = document.getElementById("all-chaats");
 let classicChaat = document.getElementById("classic-chaats");
 let dahiBasedChaat = document.getElementById("dahi-based-chaats");
 let tikkiBasedChaat = document.getElementById("tikki-based-chaats");
 let friedSnackChaat = document.getElementById("fried-snack-chaats");
 let regionalSpecialities = document.getElementById("regional-specialities");
 
+let allChaatList = document.getElementById("all-chats-list");
 let classicChaatList = document.getElementById("classic-chaats-list");
 let dahiBasedChaatList = document.getElementById("dahi-based-chaats-list");
 let tikkiBasedChaatList = document.getElementById("tikki-based-chaats-list");
 let friedSnackChaatList = document.getElementById("fried-snack-chaats-list");
 let regionalSpecialitiesList = document.getElementById("regional-specialities-list");
 
+allChat.addEventListener("click", function(){
+    localStorage.setItem("selectedFunction", "allChatFunc");
+    allChatFunc();
+});
 
 classicChaat.addEventListener("click", function(){
     localStorage.setItem("selectedFunction", "classicChaatFunc");
@@ -107,13 +112,31 @@ regionalSpecialities.addEventListener("click", function(){
     regionalSpecialitiesFunc();
 });
 
+function allChatFunc(){
+    allChaatList.style.display = "block";
+    dahiBasedChaatList.style.display = "none";
+    tikkiBasedChaatList.style.display = "none";
+    friedSnackChaatList.style.display = "none";
+    regionalSpecialitiesList.style.display = "none";
+    classicChaatList.style.display = "none";
+
+    allChat.style.backgroundColor = "rgb(70, 70, 70)";
+    classicChaat.style.backgroundColor = "rgb(42, 42, 42)";
+    dahiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
+    tikkiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
+    friedSnackChaat.style.backgroundColor = "rgb(42, 42, 42)";
+    regionalSpecialities.style.backgroundColor = "rgb(42, 42, 42)";
+}
+
 function classicChaatFunc(){
+    allChaatList.style.display = "none";
     dahiBasedChaatList.style.display = "none";
     tikkiBasedChaatList.style.display = "none";
     friedSnackChaatList.style.display = "none";
     regionalSpecialitiesList.style.display = "none";
     classicChaatList.style.display = "block";
-
+    
+    allChat.style.backgroundColor = "rgb(42, 42, 42)";
     classicChaat.style.backgroundColor = "rgb(70, 70, 70)";
     dahiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
     tikkiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
@@ -122,12 +145,14 @@ function classicChaatFunc(){
 }
 
 function dahiBasedChaatFunc(){
+    allChaatList.style.display = "none";
     classicChaatList.style.display = "none";
     tikkiBasedChaatList.style.display = "none";
     friedSnackChaatList.style.display = "none";
     regionalSpecialitiesList.style.display = "none";
     dahiBasedChaatList.style.display = "block";
 
+    allChat.style.backgroundColor = "rgb(42, 42, 42)";
     dahiBasedChaat.style.backgroundColor = "rgb(70, 70, 70)";
     classicChaat.style.backgroundColor = "rgb(42, 42, 42)";
     tikkiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
@@ -136,12 +161,14 @@ function dahiBasedChaatFunc(){
 }
 
 function tikkiBasedChaatFunc(){
+    allChaatList.style.display = "none";
     classicChaatList.style.display = "none";
     dahiBasedChaatList.style.display = "none";
     friedSnackChaatList.style.display = "none";
     regionalSpecialitiesList.style.display = "none";
     tikkiBasedChaatList.style.display = "block";
 
+    allChat.style.backgroundColor = "rgb(42, 42, 42)";
     tikkiBasedChaat.style.backgroundColor = "rgb(70, 70, 70)";
     dahiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
     classicChaat.style.backgroundColor = "rgb(42, 42, 42)";
@@ -150,12 +177,14 @@ function tikkiBasedChaatFunc(){
 }
 
 function friedSnackChaatFunc(){
+    allChaatList.style.display = "none";
     classicChaatList.style.display = "none";
     tikkiBasedChaatList.style.display = "none";
     dahiBasedChaatList.style.display = "none";
     regionalSpecialitiesList.style.display = "none";
     friedSnackChaatList.style.display = "block";
 
+    allChat.style.backgroundColor = "rgb(42, 42, 42)";
     friedSnackChaat.style.backgroundColor = "rgb(70, 70, 70)";
     dahiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
     tikkiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
@@ -164,12 +193,14 @@ function friedSnackChaatFunc(){
 }
 
 function regionalSpecialitiesFunc(){
+    allChaatList.style.display = "none";
     classicChaatList.style.display = "none";
     tikkiBasedChaatList.style.display = "none";
     friedSnackChaatList.style.display = "none";
     dahiBasedChaatList.style.display = "none";
     regionalSpecialitiesList.style.display = "block";
 
+    allChat.style.backgroundColor = "rgb(42, 42, 42)";
     regionalSpecialities.style.backgroundColor = "rgb(70, 70, 70)";
     dahiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
     tikkiBasedChaat.style.backgroundColor = "rgb(42, 42, 42)";
